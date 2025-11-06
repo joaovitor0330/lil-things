@@ -27,6 +27,8 @@ const int EchoPin = 3;
 
 void setup() {
   // initialize serial communication:
+	pinMode(EchoPin, INPUT);
+	pinMode(TggPin, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -46,7 +48,7 @@ void loop() {
   // The same pin is used to read the signal from the PING))): a HIGH pulse
   // whose duration is the time (in microseconds) from the sending of the ping
   // to the reception of its echo off of an object.
-  pinMode(EchoPin, INPUT);
+  
   duration = pulseIn(EchoPin, HIGH);
 
   // convert the time into a distance
@@ -77,3 +79,4 @@ long microsecondsToCentimeters(long microseconds) {
   // take half of the distance travelled.
   return microseconds / 29 / 2;
 }
+
