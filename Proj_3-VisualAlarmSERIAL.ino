@@ -67,6 +67,7 @@ long microsecondsToInches(long microseconds) {
   // This gives the distance travelled by the ping, outbound and return,
   // so we divide by 2 to get the distance of the obstacle.
   // See: https://www.parallax.com/package/ping-ultrasonic-distance-sensor-downloads/
+      //d=(Vsound*𝚫t)/2
   return microseconds / 74 / 2;
 }
 
@@ -76,3 +77,4 @@ long microsecondsToCentimeters(long microseconds) {
   // take half of the distance travelled.
   return microseconds / 29 / 2;
 }
+
